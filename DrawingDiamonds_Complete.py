@@ -14,13 +14,14 @@ print("---------Stage 1---------")
 print('')
 
 diamondheight = ''
-
+ienfa
 while True:
-    if diamondheight.isnumeric() == True and int(diamondheight) % 2 != 0 and int(diamondheight) >= 5:
-        diamondheight = int(diamondheight)
-        break
+    if int(diamondheight) >= 5:
+        if (diamondheight.isnumeric() == True) and (int(diamondheight) % 2 != 0):
+            diamondheight = int(diamondheight)
+            break
     else:
-        diamondheight = input('Please enter the height of the diamond (Odd number greater than 3): ')
+        diamondheight = input('Please enter the height of the diamond: ')
 
 
 
