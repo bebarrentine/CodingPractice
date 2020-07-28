@@ -125,7 +125,7 @@ This exercise uses user input, if statements, functions, the split() method, and
 
 Example Output:
 
-<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/CurrencyCalculator.JPG" width="300" height="400" />
+<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/CurrencyCalculator.JPG" width="400" height="400" />
 
 
 **As a bonus:** Use while true to continue to run the program until a valid input is given. Try using try, except, and else
@@ -145,7 +145,7 @@ This exercise uses user input, for loops, if statements, basic file methods, the
 
 Example Output:
 
-<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/MPBabyName.JPG" width="300" height="400" />
+<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/MPBabyName.JPG" width="400" height="300" />
 
 
 **As a bonus:** Create an error statement to be printed if the user inputs a nonexistent file name. For an extra challenge, try to have a statement only print when the name is not found in the list unlike the constant statement as seen in the image.
@@ -165,7 +165,7 @@ Generate a password using strings and the join() method (hint: I recommend using
 
 Example Output:
 
-<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/PasswordGenerator.JPG" width="300" height="400" />
+<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/PasswordGenerator.JPG" width="200" height="100" />
 
 
 **As a bonus:** Instead of using a specified password length hard coded in, ask the user for the desired length. Ask the user how strong they want their password to be. For weak passwords, pick a word or two from a list.
