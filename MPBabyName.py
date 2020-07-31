@@ -47,5 +47,5 @@ with open(file_name, 'r') as f_decade:
     elif baby in f_contents.split() and gender == 'f':
         print('{}{}{}{}s rank: {}'.format(file_name[6], file_name[7], file_name[8], file_name[9], f_contents.split()[f_contents.split().index(baby) - 3]))
     elif baby not in f_contents.split():
-        print('{} was not ranked in the {}{}{}{}s.'.format(baby_name, file_name[6], file_name[7], file_name[8], file_name[9]))
+        print('{} {} was not ranked in the {}{}{}{}s.'.format(baby, baby_name.split()[1].capitalize(), file_name[6], file_name[7], file_name[8], file_name[9]))
 
