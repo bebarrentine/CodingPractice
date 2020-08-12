@@ -338,6 +338,10 @@ Example Output:
 
 <img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/Hangman.JPG" width="200" height="100" />
 
+### Solution Code
+
+Here is just one way to accomplish this exercise
+
 ```
 Solution: To Be Posted
 ```
