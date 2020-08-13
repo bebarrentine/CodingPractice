@@ -66,15 +66,6 @@ class PlayerAndDealer:
     def hit(self, new_cards):
         self.playable_cards.append(new_cards)
 
-    #def stay(self):
-        #print("Dealer's turn.")
-
-   # def __str__(self):
-        #if self.name == 'Dealer':
-          #  return f'The Dealer has a {self.playable_cards[0]} and a face down card.'
-       # else:
-           # return f'{self.name} has a {self.playable_cards[0]} and a {self.playable_cards[1]}.'
-
 # GAME LOGIC
 
 game_on = True
@@ -109,11 +100,6 @@ while game_on:
             return sum(aceless_player_list) + sum(ace_list) - (10 * int(len(ace_list) - 1))
         else:
             return sum(aceless_player_list) + sum(ace_list)
-
-
-        #print(aceless_player_list)
-        #print(ace_list)
-        #print(sum(aceless_player_list) + sum(ace_list))
 
     face_down = True
     def active_cards():
