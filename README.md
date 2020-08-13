@@ -135,7 +135,119 @@ Example Output:
 Here is just one way to accomplish this exercise
 
 ```
-Solution: To be posted
+def main():
+
+  print("Hello! Welcome to the currency calculator.\nEnter in a valid price (in decimal) and we'll tell you how much of each bill and coin you'll need to best meet that amount.\n")
+
+  print ("Enter in a price:")
+
+  #This while statements continues to run until a valid input is made (ie. integers that represent cash value) 
+  while True:
+    try:
+      moneyAmount = float(input('> '))
+    except:
+      print("That wasn't a valid price!")
+      continue
+    else:
+      break
+
+  #converts the users input to a string to be split into dollars and cents
+  moneyAmount = str(moneyAmount)
+
+  #splitd the string on the decimal point
+  billsSplit = moneyAmount.split('.')
+
+  #assigns the seperate indexes of the splitted string to bills and cents
+  bills = billsSplit[0]
+  cents = billsSplit[1]
+
+  #converts the string back to an integer
+  bills = int(bills)
+  cents = int(cents)
+
+  #this function does the actual calculations of how many bills are needed
+  def calcBills(bills):
+    numHundreds = 0
+    numFifties = 0
+    numTwenties = 0
+    numTens = 0
+    numFives = 0
+    numOnes = 0
+    
+    #calculates how many hundred dollar bills are needed and then subtract
+    #from the original amount to solve for the rest of the bills (pattern
+    #continues until it reaches one dollar bills)
+    numHundreds = bills // 100
+    bills = bills - numHundreds * 100
+    
+    numFifties = bills // 50
+    bills = bills - numFifties * 50
+    
+    numTwenties = bills // 20
+    bills = bills - numTwenties * 20
+    
+    numTens = bills // 10
+    bills = bills - numTens * 10
+
+    numFives = bills // 5
+    bills = bills - numFives * 5
+    
+    numOnes = bills // 1
+    bills = bills - numOnes
+
+    #defines the variables within the displayBills function
+    displayBills(numHundreds, numFifties, numTwenties, numTens, numFives, numOnes)
+
+  #Uses calculations from calcBills to cleanly display bill amounts 
+  def displayBills(numHundreds, numFifties, numTwenties, numTens, numFives, numOnes):
+    print('')
+    print("The paper bills you will need:\n")
+    print(numHundreds,"Hundreds")
+    print(numFifties, "Fifties")
+    print(numTwenties, "Twenties")
+    print(numTens, "Tens")
+    print(numFives, "Fives")
+    print(numOnes, "Ones\n")
+
+  #this function does the actual calculations of how many coins are needed
+  def calcCents(cents):
+    numQuarters = 0
+    numDimes = 0
+    numNickels = 0
+    numPennies = 0
+
+    #calculates how many quarters are needed and then subtracts
+    #from the original amount to solve for the rest of the coins (pattern
+    #continues until it reaches pennies)
+    numQuarters = cents // 25
+    cents = cents - numQuarters * 25
+    
+    numDimes = cents // 10
+    cents = cents - numDimes * 10
+
+    numNickels = cents // 5
+    cents = cents - numNickels * 5
+    
+    numPennies = cents // 1
+    cents = cents - numPennies
+
+    #defines the variables within the displayCents function
+    displayCents(numQuarters, numDimes, numNickels, numPennies)
+
+  #Uses calculations from calcBills to cleanly display coin amounts 
+  def displayCents(numQuarters, numDimes, numNickels, numPennies):
+    print("The coins you will need:\n")
+    print(numQuarters, "Quarters")
+    print(numDimes, "Dimes")
+    print(numNickels, "Nickels")
+    print(numPennies, "Pennies")
+
+  #runs the functions to do the calculations
+  calcBills(bills)
+  calcCents(cents)
+
+#runs code within main function
+main()
 ```
 
 
@@ -155,7 +267,43 @@ Example Output:
 Here is just one way to accomplish this exercise
 
 ```
-Solution: To be posted
+def main():
+
+  print ("What is your file name (with extension)?")
+  fileName = input("> ")
+
+  year = fileName.split('_')
+  year = year[-1].split('.')
+  year = year[0]
+
+  try:
+    txt = open(fileName,"r")
+
+    print("\nEnter the baby's first and last name:")
+    babyName = input("> ")
+    babyName = babyName.split()
+    babyName = babyName[0]
+
+    print("\nEnter the gender of the baby (m/f)")
+    babyGender = input("> ")
+
+      
+    for line in txt:
+      if babyGender == "m":
+        if line.split()[1] == babyName:
+          print('\n',year,"Rank: ",line.split()[0])
+        
+      elif babyGender == "f":
+        if line.split()[3] == babyName:
+          print('\n',year,"Rank: ",line.split()[0])
+
+      else:
+        print("\nThe name was not ranked in that decade")
+
+  except:
+    print("This file does not exist")
+
+main()
 ```
 
 
@@ -175,10 +323,30 @@ Example Output:
 Here is just one way to accomplish this exercise
 
 ```
-Solution: To be posted
+import random
+
+s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+passlen = 8
+p =  "".join(random.sample(s,passlen ))
+print p
 ```
 
-## Coming Soon: Text-Based Adventure and Hangman
+## Exercise Six: Hangman
+Recreate the game Hangman using the provided ASCII art. In this exercise, you should use lists, in operator, split(), lower(), upper(), startswith(), endswith(), and elif statements.
+
+Example Output:
+
+<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/Hangman.JPG" width="200" height="100" />
+
+### Solution Code
+
+Here is just one way to accomplish this exercise
+
+```
+Solution: To Be Posted
+```
+
+## Coming Soon: Text-Based Adventure and OOP Exercises
 
 ## Python/IDE Resources
 I'll add to this as time goes on
