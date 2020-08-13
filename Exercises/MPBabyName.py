@@ -29,7 +29,7 @@ while file_name not in file_list:
 
 baby_name = input("Enter the baby's first and last name: ").capitalize()
 
-gender = '5'
+gender = ''
 while gender not in ['m', 'f']:
         gender = input('Enter the gender of the baby (m/f): ')
         if gender not in ['m', 'f']:

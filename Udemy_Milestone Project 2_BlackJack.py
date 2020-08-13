@@ -173,7 +173,7 @@ while game_on:
     active_cards()
     blackjack = False
     if card_value(player) == 21:
-        print(f'{player.name} got a BlackJack!')
+        print(f'{player.name} got a BlackJack! {player.name} should stay.')
         blackjack = True
 
     hit_or_stay = ''
