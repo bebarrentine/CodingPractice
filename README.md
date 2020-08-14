@@ -336,8 +336,9 @@ Recreate the game Hangman using the provided ASCII art. In this exercise, you sh
 
 Example Output:
 
-<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/Hangman.JPEG" width="200" height="500" />
-<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/Hangman.2.JPEG" width="200" height="200" />
+<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/Hangman.JPG" width="200" height="500" />
+**Big photo~**
+<img src="https://github.com/bebarrentine/CodingPractice/blob/master/ProgrammingSC/Hangman.2.JPG" width="200" height="200" />
 
 ### Solution Code
 
