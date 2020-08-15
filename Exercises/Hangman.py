@@ -46,12 +46,12 @@ while play_again:
 
     n = 0
     hangman_output = ['_']*len(hangman_word)
-    missed_letters = []
+    missed_letters = ' '
     print(HANGMAN_ASCII[0])
     guessed_letter = 1
     while n < 6:
         print(f'Missed Letters: {missed_letters}')
-        print(hangman_output)
+        print(''.join(hangman_output))
         if '_' not in hangman_output:
             break
         guessed_letter = input('Guess a letter in the Hangman word: ').lower()
@@ -61,9 +61,9 @@ while play_again:
                 hangman_output[k] = guessed_letter
             print(HANGMAN_ASCII[n])
         else:
-            if guessed_letter not in missed_letters:
+            if guessed_letter not in list(missed_letters):
                 n += 1
-                missed_letters.append(guessed_letter)
+                missed_letters = missed_letters + ' ' + guessed_letter
                 print(HANGMAN_ASCII[n])
             else:
                 print(' ')
@@ -88,9 +88,11 @@ while play_again:
     if n == 6:
         print(' ')
         print('You lost.')
+        print(f'The word was: {hangman_word}')
         replay()
     else:
         print(' ')
+        print(f"That's right! The word was {hangman_word}")
         print('You won!')
         replay()
 
